@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lzjzjznzbzhjakanabja-hub.github.io/Velvet-Cofee/sitemap.xml
