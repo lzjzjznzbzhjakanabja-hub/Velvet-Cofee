@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VELVET COFFEE</title><style>
+:root{--bg:#0d0908;--s:#18110f;--s2:#251914;--c:#f5ead8;--m:#b9aa9b;--g:#c79a67;--l:rgba(245,234,216,.13);--d:#dc9180}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--c);font-family:Arial,sans-serif}button,a{font:inherit}button{cursor:pointer}.nav{height:72px;position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:0 6%;background:rgba(13,9,8,.95);border-bottom:1px solid var(--l)}.logo{font:700 22px Georgia,serif;letter-spacing:5px}.links{display:flex;gap:24px;color:var(--m);font-size:14px}.links a{color:inherit;text-decoration:none}.cart{border:1px solid var(--g);background:transparent;color:var(--c);padding:9px 15px;border-radius:99px}.badge{background:var(--c);color:#111;border-radius:50%;padding:3px 7px;font-size:11px;margin-left:4px}.view{display:none}.view.active{display:block}.hero{min-height:620px;display:grid;place-items:center;text-align:center;padding:60px;background:radial-gradient(circle at 50% 20%,#513022,#21130f 38%,#0d0908 72%)}.kicker{color:var(--g);text-transform:uppercase;letter-spacing:5px;font-size:11px}.hero h1{font:700 clamp(64px,11vw,130px)/.85 Georgia,serif;margin:20px}.hero p{max-width:600px;color:#decfbe;font-size:18px}.btn{display:inline-block;border:1px solid var(--c);border-radius:99px;padding:14px 22px;margin:8px;background:transparent;color:var(--c);text-decoration:none;font-weight:bold}.primary{background:var(--c);color:#17100c}.section{max-width:1280px;margin:auto;padding:90px 6%}.head{display:flex;justify-content:space-between;gap:30px;align-items:end}.head h2,.cartpage h1{font:700 clamp(42px,6vw,68px)/1 Georgia,serif;margin:0}.head p{color:var(--m);max-width:440px}.tabs{display:flex;gap:9px;overflow:auto;padding:25px 0}.tab{white-space:nowrap;border:1px solid var(--l);background:transparent;color:var(--m);padding:10px 16px;border-radius:99px}.tab.active{background:var(--c);color:#111}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--s);border:1px solid var(--l);border-radius:22px;overflow:hidden}.visual{height:210px;display:grid;place-items:center;font-size:88px;background:radial-gradient(circle,#543326,#21130f)}.body{padding:20px}.row{display:flex;justify-content:space-between;gap:10px;font:700 21px Georgia,serif}.price{color:var(--g)}.body p{color:var(--m);font-size:13px;min-height:38px}.add{width:100%;padding:11px;border-radius:12px;border:1px solid var(--l);background:var(--s2);color:var(--c);font-weight:bold}.about,.visit,.reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.reviews{grid-template-columns:repeat(3,1fr)}.block,.review{background:var(--s);border:1px solid var(--l);border-radius:22px;padding:28px}.block h3{font:700 32px Georgia,serif;margin:0}.block p,.review p{color:var(--m)}.stars{color:var(--g)}footer{padding:35px 6%;border-top:1px solid var(--l);color:var(--m);display:flex;justify-content:space-between}.cartpage{max-width:900px;margin:auto;padding:55px 6%}.back{border:0;background:none;color:var(--g);font-weight:bold;margin-bottom:20px}.cartbox{background:var(--s);border:1px solid var(--l);border-radius:24px;padding:24px;margin-top:25px}.item{display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--l)}.item b{display:block;font:700 20px Georgia,serif}.item span{color:var(--m);font-size:13px}.qty{display:flex;gap:9px;align-items:center}.qty button{width:30px;height:30px;border-radius:50%;border:1px solid var(--l);background:var(--s2);color:var(--c)}.remove{border:1px solid rgba(220,145,128,.5);background:transparent;color:var(--d);padding:8px 11px;border-radius:9px}.total{display:flex;justify-content:space-between;font-size:22px;padding-top:22px}.total strong{color:var(--g)}.order{width:100%;margin-top:20px;padding:15px;border:0;border-radius:99px;background:var(--c);color:#17100c;font-weight:bold}.empty{text-align:center;padding:50px;color:var(--m)}.modal{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;place-items:center;padding:20px;z-index:50}.modal.open{display:grid}.modalbox{max-width:470px;background:#1d1411;border:1px solid var(--l);border-radius:25px;padding:35px;text-align:center}.modalbox h2{font:700 36px Georgia,serif}.modalbox p{color:var(--m)}@media(max-width:800px){.links{display:none}.grid,.about,.visit,.reviews{grid-template-columns:1fr}.head{display:block}.item{grid-template-columns:1fr auto}.remove{grid-column:1/-1}.section{padding:70px 5%}}
+</style></head><body>
+<nav class="nav"><div class="logo">VELVET</div><div class="links"><a href="#menu">Menu</a><a href="#story">Story</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a><a href="#experience">Experience</a></div><button class="cart" onclick="showCart()">Cart <span class="badge" id="count">0</span></button></nav>
+<main id="shop" class="view active"><header class="hero"><div><div class="kicker">Coffee · Dessert · Atmosphere</div><h1>VELVET<br>COFFEE</h1><p>A warm, modern coffee house built around beautiful coffee, handcrafted desserts and slow moments.</p><a href="#menu" class="btn primary">Explore menu</a><a href="#visit" class="btn">Find us</a></div></header>
+<section class="section" id="menu"><div class="head"><h2>Full menu</h2><p>Choose your favorite and add it to your order.</p></div><div class="tabs"><button class="tab active" data-f="all">All</button><button class="tab" data-f="coffee">Coffee</button><button class="tab" data-f="cold">Cold drinks</button><button class="tab" data-f="dessert">Desserts</button><button class="tab" data-f="food">Breakfast & snacks</button></div><div id="grid" class="grid"></div></section>
+<section class="section" id="story"><div class="head"><h2>The VELVET idea</h2></div><div class="about"><div class="block"><h3>A coffee place with a feeling.</h3><p>VELVET combines warm materials, modern details and a calm atmosphere where people can meet, work or simply slow down.</p></div><div class="block"><h3>Made beautifully.</h3><p>Every detail — from the cup to the dessert — is part of the experience.</p></div></div></section>
+<section class="section" id="reviews"><div class="head"><h2>What guests say</h2></div><div class="reviews"><div class="review"><div class="stars">★★★★★</div><p>“Beautiful atmosphere and great coffee.”</p><small>— Anna M.</small></div><div class="review"><div class="stars">★★★★★</div><p>“The kind of place where you want to stay longer.”</p><small>— Daniel K.</small></div><div class="review"><div class="stars">★★★★★</div><p>“Modern, calm and premium.”</p><small>— Leyla R.</small></div></div></section>
+<section class="section" id="visit"><div class="head"><h2>Visit VELVET</h2></div><div class="visit"><div class="block"><h3>📍 Address</h3><p>Baku, Azerbaijan · Location coming soon</p><h3>🕐 Hours</h3><p>Mon–Thu 08:00–22:00<br>Fri–Sun 08:00–00:00</p></div><div class="block"><h3>VELVET COFFEE</h3><p>Your next favorite coffee spot.</p></div></div></section>
+<section class="section" id="experience">
+  <div class="head"><h2>The VELVET experience</h2><p>More reasons to stay for one more coffee.</p></div>
+  <div class="reviews">
+    <div class="review"><div style="font-size:32px">🌿</div><h3>Slow mornings</h3><p>Start your day with calm music, warm pastries and carefully prepared coffee.</p></div>
+    <div class="review"><div style="font-size:32px">💻</div><h3>Work & create</h3><p>A comfortable place for meetings, ideas and focused afternoons.</p></div>
+    <div class="review"><div style="font-size:32px">🌙</div><h3>Evening mood</h3><p>As the lights go down, VELVET becomes a warmer place for conversations and dessert.</p></div>
+  </div>
+</section>
+
+<section class="section" id="signature">
+  <div class="about">
+    <div class="block">
+      <div class="kicker">Signature selection</div>
+      <h3>Made for your perfect coffee moment.</h3>
+      <p>From smooth espresso drinks to refreshing cold brews and handcrafted desserts, our menu is designed around simple combinations done exceptionally well.</p>
+      <button class="btn primary" type="button" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">View menu</button>
+    </div>
+    <div class="block" style="display:grid;place-items:center;min-height:280px;font-size:110px;background:radial-gradient(circle,#59372a,#21130f)">🍰</div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="head"><h2>Good to know</h2><p>Everything you need before visiting VELVET.</p></div>
+  <div class="about">
+    <div class="block"><h3>Do you offer takeaway?</h3><p>Yes. Our drinks and selected food items can be prepared for takeaway.</p></div>
+    <div class="block"><h3>Can I work from VELVET?</h3><p>Absolutely. We designed the atmosphere to be comfortable for both social meetings and focused work.</p></div>
+    <div class="block"><h3>Will online ordering be available?</h3><p>Online ordering and payment are planned for a future version of VELVET COFFEE.</p></div>
+    <div class="block"><h3>Do you have seasonal drinks?</h3><p>Yes. The menu can evolve with limited seasonal specials throughout the year.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="block" style="text-align:center;padding:60px 25px;background:radial-gradient(circle at 50% 0,#4b2d21,#18110f)">
+    <div class="kicker">See you soon</div>
+    <h2 style="font:700 clamp(42px,7vw,78px)/1 Georgia,serif;margin:15px 0">Take a moment.<br>Make it VELVET.</h2>
+    <p style="max-width:600px;margin:20px auto;color:var(--m)">Coffee tastes better when you have time to enjoy it.</p>
+    <button class="btn primary" type="button" onclick="showCart()">Order something</button>
+  </div>
+</section>
+<footer><span>© 2026 VELVET COFFEE</span><span>Coffee made beautifully.</span></footer></main>
+<main id="cartview" class="view"><section class="cartpage"><button class="back" onclick="showShop()">← Back to menu</button><h1>Your cart</h1><div id="cartbox" class="cartbox"></div></section></main>
+<div class="modal" id="modal"><div class="modalbox"><div style="font-size:55px">☕</div><h2>Coming soon</h2><p>Online payment is coming soon.<br>Thank you for choosing VELVET COFFEE.</p><button class="btn primary" onclick="closeModal()">Back to cart</button></div></div>
+<script>
+const products=[
+{id:1,n:"Velvet Latte",c:"coffee",p:9,i:"☕",d:"Silky espresso, steamed milk and a delicate house finish."},
+{id:2,n:"Signature Brew",c:"coffee",p:8,i:"🫖",d:"Slow-brewed specialty coffee with a deep balanced profile."},
+{id:3,n:"Cappuccino",c:"coffee",p:8,i:"☕",d:"Rich espresso with silky foam and a classic finish."},
+{id:4,n:"Iced Velvet",c:"cold",p:10,i:"🧊",d:"Chilled espresso, milk and ice for a refreshing drink."},
+{id:5,n:"Cold Brew",c:"cold",p:9,i:"🥤",d:"Slow-steeped coffee served cold and perfectly balanced."},
+{id:6,n:"Velvet Cake",c:"dessert",p:12,i:"🍰",d:"Rich chocolate layers with a soft cream finish."},
+{id:7,n:"Tiramisu",c:"dessert",p:11,i:"🍮",d:"Coffee-soaked layers, mascarpone cream and cocoa."},
+{id:8,n:"Butter Croissant",c:"food",p:7,i:"🥐",d:"Flaky, buttery and baked for a crisp golden finish."},
+{id:9,n:"Avocado Toast",c:"food",p:13,i:"🥑",d:"Toasted sourdough, creamy avocado and a fresh finish."}
+];
+let cart=[];try{cart=JSON.parse(localStorage.getItem("velvet_cart"))||[]}catch(e){}
+const money=n=>"₼"+n;
+function save(){localStorage.setItem("velvet_cart",JSON.stringify(cart));document.getElementById("count").textContent=cart.reduce((s,x)=>s+x.q,0)}
+function menu(filter="all"){document.getElementById("grid").innerHTML=products.filter(x=>filter==="all"||x.c===filter).map(x=>`<article class="card"><div class="visual">${x.i}</div><div class="body"><div class="row"><span>${x.n}</span><span class="price">${money(x.p)}</span></div><p>${x.d}</p><button class="add" onclick="add(${x.id})">＋ Add to cart</button></div></article>`).join("")}
+function add(id){let x=cart.find(x=>x.id===id);if(x)x.q++;else cart.push({id:id,q:1});save();showCart()}
+function showCart(){document.getElementById("shop").classList.remove("active");document.getElementById("cartview").classList.add("active");renderCart();scrollTo(0,0)}
+function showShop(){document.getElementById("cartview").classList.remove("active");document.getElementById("shop").classList.add("active");scrollTo(0,0)}
+function qty(id,d){let x=cart.find(x=>x.id===id);x.q+=d;if(x.q<=0)cart=cart.filter(x=>x.id!==id);save();renderCart()}
+function remove(id){cart=cart.filter(x=>x.id!==id);save();renderCart()}
+function renderCart(){let box=document.getElementById("cartbox");if(!cart.length){box.innerHTML='<div class="empty"><div style="font-size:55px">🛒</div><h2>Your cart is empty</h2><p>Add something delicious from our menu.</p><button class="btn primary" onclick="showShop()">Explore menu</button></div>';return}let total=0;box.innerHTML=cart.map(x=>{let p=products.find(p=>p.id===x.id);total+=p.p*x.q;return `<div class="item"><div><b>${p.i} ${p.n}</b><span>${money(p.p)} each · ${money(p.p*x.q)}</span></div><div class="qty"><button onclick="qty(${p.id},-1)">−</button><b>${x.q}</b><button onclick="qty(${p.id},1)">+</button></div><button class="remove" onclick="remove(${p.id})">Remove</button></div>`}).join("")+`<div class="total"><span>Total</span><strong>${money(total)}</strong></div><button class="order" onclick="order()">Order now</button>`}
+function order(){document.getElementById("modal").classList.add("open")}function closeModal(){document.getElementById("modal").classList.remove("open")}
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");menu(b.dataset.f)});
+save();menu();
+</script></body></html>
